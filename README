@@ -1,0 +1,35 @@
+To build a new react app, follow a two part process
+
+1. Use create-react-app to generate a new project (called jsx)
+   Using Dockerfile.new, and a fake server.js + package.json
+
+# build image
+docker build . -f Dockerfile.new -t myapp
+
+# run image
+docker run --name myapp -v /Users/amaheshwari/Documents/Projects/sandbox-javascript/jsx:/src/jsx -p 3000:8080 -d myapp
+
+# create new app
+docker exec -it myapp create-react-app jsx
+
+2. Run the new app
+# build image
+docker build . -f Dockerfile.app -t myapp
+
+# run image
+docker run --name myapp -v /Users/amaheshwari/Documents/Projects/sandbox-javascript/jsx:/src/jsx -p 3000:3000 -d myapp
+
+
+3. Misc Stuff
+
+# Get container ID
+docker ps
+
+# Print app output
+docker logs myapp
+
+# Enter the container
+docker exec -it myapp /bin/bash
+
+# Clean up
+docker stop myapp; docker rm myapp
