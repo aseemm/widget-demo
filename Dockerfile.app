@@ -2,8 +2,8 @@ FROM node:16.7
 
 # Create app directory
 # RUN mkdir -p /src
-COPY ./jsx /src/jsx
-WORKDIR /src/jsx
+COPY ./seasons /src/seasons
+WORKDIR /src/seasons
 # WORKDIR /usr/src/app
 
 # Install app dependencies
