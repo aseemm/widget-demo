@@ -2,8 +2,8 @@ FROM node:16.7
 
 # Create app directory
 # RUN mkdir -p /src
-COPY ./seasons /src/seasons
-WORKDIR /src/seasons
+COPY ./pics /src/pics
+WORKDIR /src/pics
 # WORKDIR /usr/src/app
 
 # Install app dependencies
@@ -12,6 +12,7 @@ WORKDIR /src/seasons
 # COPY package*.json ./
 
 RUN npm install
+RUN npm install --save axios
 # RUN npm install -g create-react-app
 # RUN create-react-app jsx
 
