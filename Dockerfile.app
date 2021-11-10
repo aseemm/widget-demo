@@ -2,8 +2,8 @@ FROM node:16.7
 
 # Create app directory
 # RUN mkdir -p /src
-COPY ./pics /src/pics
-WORKDIR /src/pics
+COPY ./videos /src/videos
+WORKDIR /src/videos
 # WORKDIR /usr/src/app
 
 # Install app dependencies

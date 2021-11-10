@@ -7,17 +7,17 @@ To build a new react app, follow a two part process
 docker build . -f Dockerfile.new -t myapp
 
 # run image
-docker run --name myapp -v /Users/amaheshwari/Documents/Projects/sandbox-javascript/pics:/src/pics -p 3000:8080 -d myapp
+docker run --name myapp -v /Users/amaheshwari/Documents/Projects/sandbox-javascript/videos:/src/videos -p 3000:8080 -d myapp
 
 # create new app
-docker exec -it myapp create-react-app pics
+docker exec -it myapp create-react-app videos
 
 2. Run the new app
 # build image
 docker build . -f Dockerfile.app -t myapp
 
 # run image
-docker run --name myapp -v /Users/amaheshwari/Documents/Projects/sandbox-javascript/pics:/src/pics -p 3000:3000 -d myapp
+docker run --name myapp -v /Users/amaheshwari/Documents/Projects/sandbox-javascript/videos:/src/videos -p 3000:3000 -d myapp
 
 
 3. Misc Stuff
