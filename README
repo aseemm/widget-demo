@@ -1,23 +1,23 @@
 To build a new react app, follow a two part process
 
-1. Use create-react-app to generate a new project (called jsx)
+1. Use create-react-app to generate a new project (called widgets)
    Using Dockerfile.new, and a fake server.js + package.json
 
 # build image
 docker build . -f Dockerfile.new -t myapp
 
 # run image
-docker run --name myapp -v /Users/amaheshwari/Documents/Projects/sandbox-javascript/videos-hooks:/src/videos-hooks -p 3000:8080 -d myapp
+docker run --name myapp -v /Users/amaheshwari/Documents/Projects/sandbox-javascript/widgets:/src/widgets -p 3000:8080 -d myapp
 
 # create new app
-docker exec -it myapp create-react-app videos-hooks
+docker exec -it myapp create-react-app widgets
 
 2. Run the new app
 # build image
 docker build . -f Dockerfile.app -t myapp
 
 # run image
-docker run --name myapp -v /Users/amaheshwari/Documents/Projects/sandbox-javascript/videos-hooks:/src/videos-hooks -p 3000:3000 -d myapp
+docker run --name myapp -v /Users/amaheshwari/Documents/Projects/sandbox-javascript/widgets:/src/widgets -p 3000:3000 -d myapp
 
 
 3. Misc Stuff
@@ -37,7 +37,7 @@ docker stop myapp; docker rm myapp
 4a. Deploying to Vercel
 1. npm install -g vercel # install vercel CLI
 2. vercel login
-3. vercel # in videos-hooks (projects) directory
+3. vercel # in widgets (projects) directory
 4. vercel --prod # rebuild changes
 
 4b. Deploying to Netlify (Need github)

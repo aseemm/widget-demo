@@ -2,8 +2,8 @@ FROM node:16.7
 
 # Create app directory
 # RUN mkdir -p /src
-COPY ./videos-hooks /src/videos-hooks
-WORKDIR /src/videos-hooks
+COPY ./widgets /src/widgets
+WORKDIR /src/widgets
 # WORKDIR /usr/src/app
 
 # Install app dependencies
@@ -14,7 +14,7 @@ WORKDIR /src/videos-hooks
 RUN npm install
 RUN npm install --save axios
 # RUN npm install -g create-react-app
-# RUN create-react-app jsx
+# RUN create-react-app widgets
 
 # If you are building your code for production
 # RUN npm ci --only=production
